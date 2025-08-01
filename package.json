@@ -1,11 +1,13 @@
 {
     "name": "@paternnlabs/qh-shared",
     "version": "1.0.24",
-    "description": "Shared utilities and database schema for qh projects.",
+    "description": "Backend supabase and meilisearch utilities and database schema for qh projects.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "scripts": {
+      "db:start": "npx supabase start",
+      "db:stop": "npx supabase stop",
       "db:push": "npx supabase db push",
       "db:reset": "npx supabase db reset",
       "package:build": "tsup",
