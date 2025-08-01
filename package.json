@@ -1,0 +1,62 @@
+{
+    "name": "@paternnlabs/qh-shared",
+    "version": "1.0.24",
+    "description": "Shared utilities and database schema for qh projects.",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+      "db:push": "npx supabase db push",
+      "db:reset": "npx supabase db reset",
+      "package:build": "tsup",
+      "package:publish": "npm version patch && npm publish\n",
+      "docker:up": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml up -d && node ./image-registry/post-up-message.js",
+      "docker:pull": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml pull",
+      "docker:restart": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml restart",
+      "docker:stop": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml stop",
+      "docker:down": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml down --remove-orphans",
+      "docker:logs": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml logs -f --tail=100",
+      "docker:ps": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml ps"
+    },
+    "exports": {
+      ".": {
+        "require": "./dist/index.js",
+        "import": "./dist/index.mjs",
+        "types": "./dist/index.d.ts"
+      }
+    },
+    "files": [
+      "dist",
+      "README.md"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/paternnlabs/qh-shared.git"
+    },
+    "author": "paternnlabs",
+    "license": "UNLICENSED",
+    "keywords": [
+      "qh",
+      "shared",
+      "database",
+      "utils",
+      "supabase"
+    ],
+    "publishConfig": {
+      "access": "public"
+    },
+    "dependencies": {
+      "dotenv": "^16.5.0",
+      "supabase": "^2.31.4",
+      "uuid": "^11.1.0"
+    },
+    "devDependencies": {
+      "@faker-js/faker": "^9.9.0",
+      "@types/node": "^20.11.5",
+      "ts-node": "^10.9.2",
+      "tsup": "^8.5.0",
+      "tsx": "^4.19.4",
+      "typescript": "^5.8.3"
+    },
+    "type": "module"
+  }

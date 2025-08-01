@@ -1,0 +1,31 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+
+# NPM configuration with tokens
+.npmrc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tgz
+.idea/
+.vscode/
+
+# Ignore local ignore file
+.ignore

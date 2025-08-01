@@ -1,0 +1,66 @@
+# Ignore test, config, and script files
+src/scripts/
+drizzle.config.ts
+.env
+node_modules/
+dist/
+.git/
+.gitignore
+.ignore
+package-lock.json
+
+# Source files (only dist/compiled files should be published)
+/lib/
+!/lib/**/*.d.ts
+
+# Tests
+**/*.test.ts
+**/*.spec.ts
+**/*.test.js
+**/*.spec.js
+**/*.test.tsx
+**/*.spec.tsx
+**/__tests__/
+**/mocks.ts
+
+# TypeScript configs
+tsconfig.json
+tsup.config.ts
+*.tsbuildinfo
+
+# Development configs
+.eslintrc*
+.prettierrc*
+.vscode/
+.github/
+.husky/
+.npmrc
+jest.config.*
+vitest.config.*
+
+# Supabase
+/supabase/
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Misc
+.git/
+.gitignore
+**/.DS_Store
+**/node_modules/
+coverage/
+documentation/
+docs/
+**/*.log
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
