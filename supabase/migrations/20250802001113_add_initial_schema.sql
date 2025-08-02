@@ -427,7 +427,6 @@ BEGIN
               ]
             }', '{}', '2023-05-03 19:41:43.580424+00',
             '2023-05-03 19:41:43.585948+00', '', '', '', '');
-
     INSERT INTO auth.identities (id, provider_id, user_id, identity_data, provider, last_sign_in_at, created_at,
                                  updated_at)
     VALUES (gen_random_uuid(), user_id, user_id, format('{"sub":"%s","email":"%s"}', user_id::text, email)::jsonb,

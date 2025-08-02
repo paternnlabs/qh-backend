@@ -12,7 +12,7 @@
       "db:reset": "npx supabase db reset",
       "db:diff": "npx supabase db diff -f",
       "db:migrate": "npx supabase migration up",
-      "package:build": "tsup",
+      "db:dump": "npx supabase db dump > supabase/schemas/prod.sql",
       "package:publish": "npm version patch && npm publish\n",
       "docker:up": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml up -d && node ./image-registry/post-up-message.js",
       "docker:pull": "docker compose --env-file ./.env -f ./image-registry/docker-compose.yml pull",
