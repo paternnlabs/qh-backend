@@ -53,7 +53,7 @@ enabled = true
 schema_paths = [
     "./schemas/tables.sql",
     "./schemas/functions.sql",
-    "./schemas/*.sql"
+    "./schemas/policies.sql"
 
 ]
 
